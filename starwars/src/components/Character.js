@@ -1,14 +1,13 @@
 import React from 'react';
 
  const Character = props => {
-   console.log(props)
+   console.log("CC", props)
   return (
-    <div>
-      <h1 className="Header">React Wars</h1>
-      <h1>{props.swapi.name}</h1>
-      <img src={props.swapi.url} alt="Star Wars Characters"/>
-      <h1>{props.swapi.birth_year}</h1>
-      <h1>{props.swapi.gender}</h1>
+    <div style={{color: "white"}}>
+      <h1>{props.character.name}</h1>
+       <a href={props.character.url}>Click here to see your favorite character</a>
+      <h1>{props.character.birth_year}</h1>
+      <h1>{props.character.gender}</h1>
     </div>
   )
 }
