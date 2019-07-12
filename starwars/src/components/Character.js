@@ -1,14 +1,20 @@
 import React from 'react';
+import { Container, Card } from 'semantic-ui-react';
 
  const Character = props => {
    console.log("CC", props)
   return (
-    <div style={{color: "white"}}>
-      <h1>{props.character.name}</h1>
-       <a href={props.character.url}>Click here to see your favorite character</a>
-      <h1>{props.character.birth_year}</h1>
-      <h1>{props.character.gender}</h1>
-    </div>
+    <Container>
+        <br/>
+        <br/>
+        
+          <Card align style={{color: "black", margin:"auto", background: "#59D5E1", opacity: 0.8}}
+            header={props.character.name}
+            description={props.character.birth_year}
+            meta={props.character.gender}
+            color="red"
+          />
+    </Container>
   )
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
-import CharacterMap from './components/CharacterMap'
+import CharacterMap from './components/CharacterMap';
+import { Header } from 'semantic-ui-react';
 
 import './App.css';
 
@@ -22,7 +23,7 @@ if(!swapi) return <h1 style={{color: "white"}}>Loading...</h1>
 console.log("My SWAPI", swapi)
   return (
     <div className="App">
-    <h1 className="Header">React Wars</h1>
+    <Header size="huge" style={{color: "white"}}>React Wars</Header>
      <CharacterMap swapi={swapi} />
     </div>
   );
